@@ -89,8 +89,8 @@ object NtpServerManager {
         emitStatus()
     }
 
-    fun setStratum(v: Int) { stratum = v; emitStatus() }
-    fun setPacketLimit(v: Int) { packetLimit = v }
+    fun applyStratum(v: Int) { stratum = v; emitStatus() }
+    fun applyPacketLimit(v: Int) { packetLimit = v }
     fun setInterface(ctx: Context, name: String) {
         interfaceName = name
         ip = NetworkController(ctx).ipFor(name)

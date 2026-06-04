@@ -67,11 +67,11 @@ class MainActivity : FlutterActivity() {
                 }
                 "getStatus" -> result.success(NtpServerManager.statusMap())
                 "setStratum" -> {
-                    NtpServerManager.setStratum(call.argument<Int>("stratum") ?: 1)
+                    NtpServerManager.applyStratum(call.argument<Int>("stratum") ?: 1)
                     result.success(true)
                 }
                 "setPacketLimit" -> {
-                    NtpServerManager.setPacketLimit(call.argument<Int>("limit") ?: 0)
+                    NtpServerManager.applyPacketLimit(call.argument<Int>("limit") ?: 0)
                     result.success(true)
                 }
                 "setInterface" -> {

@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "app.timeserver"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // Pinned to the highest NDK required by the plugins (backward compatible).
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
